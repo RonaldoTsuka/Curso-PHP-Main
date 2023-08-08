@@ -1,0 +1,145 @@
+*{
+    font-family: 'STIX Two Math', serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 120px 1fr 60px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "cabecalho " 
+    "principal " 
+    " rodape" ;
+}
+
+.cabecalho{
+    grid-area: cabecalho;
+    background-color: rgba(87, 201, 163, 0.568);
+    color: darkblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    box-shadow: -3px 14px 16px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -3px 14px 16px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 14px 16px -12px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.cabecalho > h1{
+ margin: 0px;
+ font-weight: 300;
+ font-size: 2.8rem;
+}
+
+.cabecalho > h2{
+    margin: 0px;
+    font-weight: 300;
+    font-size: 1.6rem;
+   }
+   
+
+.principal{
+    grid-area: principal;
+    background-color:rgb(223, 223, 223);
+    height: calc(100vh - 180px);
+    padding: 20px;
+}
+
+.conteudo{
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: white;
+    padding: 20px;
+    box-shadow: -5px 2px 18px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -5px 2px 18px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 2px 18px -4px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+.rodape{
+    grid-area: rodape;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0px 20px;
+    color: grey;
+}
+
+.modulos{
+    display: flex;
+    /*Quebra de linha: */ flex-wrap: wrap; 
+    justify-content: space-around;
+
+} 
+
+.modulo{
+    flex-basis: 32%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+.modulo > h3{
+    color: #ffff;
+    background-color: teal;
+    font-size: 1.5rem;;
+    font-weight: 300;
+    padding: 10px 20px;
+}
+
+.modulo > ul{
+  margin: 0px;
+  padding: 10px;
+  list-style: none;
+}
+
+.modulo > ul > li{
+   padding: 5px;
+   font-size: 1.3rem;
+   /*Habilita o cursor: */ cursor: pointer;
+  }
+
+  .modulo > ul > li > a{
+    display: flex;
+    text-decoration: none;
+    color: grey;
+    
+}
+
+.modulo > ul > li:hover{
+   background-color: whitesmoke;
+    
+}
+
+.modulo.verde { border: 2px solid green ; }
+.modulo.verde > h3 { background-color: green ; }
+
+.modulo.vermelho {border: 2px solid red ;}
+.modulo.vermelho > h3  {background-color: red ;}
+
+.modulo.laranja {border: 2px solid orange ;}
+.modulo.laranja > h3  {background-color: orange;}
+
+.modulo.amarelo {border: 2px solid yellow;}
+.modulo.amarelo > h3  {background-color: yellow ;}
+
+.modulo.rosa {border: 2px solid rgb(173, 159, 173) ;}
+.modulo.rosa > h3  {background-color: rgb(173, 159, 173);}
+
+.modulo.roxo {border: 2px solid purple ;}
+.modulo.roxo > h3  {background-color: purple ;}
+
+.modulo.verdeEsc {border: 2px solid rgb(8, 88, 8) ;}
+.modulo.verdeEsc > h3  {background-color: rgb(8, 88, 8);}
+
+.modulo.crimson {border: 2px solid crimson ;}
+.modulo.crimson > h3  {background-color: crimson ;}
+
+.modulo.brown {border: 2px solid brown ;}
+.modulo.brown > h3  {background-color: brown ;}
